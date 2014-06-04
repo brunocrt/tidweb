@@ -1,0 +1,11 @@
+TIDWEB is a proprietary condominium management web application developed in Java using Grails framework.
+
+The main domain classes and relationships are described bellow
+
+Condominio 1..n Unidade 1..n Morador 1..n Domestica, 1..n Visitante, 1..n Prestador, 1..n Familiar
+           1..n Correspondencia
+	   1..n AvisoGeral
+	   1..n Reserva 1..n Convidado
+	   1..1 Mural 1..n Nota
+
+The application has three types of users; the reception users, the dwellers users and the admin user. 
