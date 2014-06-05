@@ -15,6 +15,7 @@
 	<section id="intro" class="first">
 		<div class="row">
 		    	<div class="center">
+				<img src="${resource(dir: 'images', file: 'logo.jpg')}" alt="TIDWEB"/>
 				<h3>Tidweb - Sistema de gestão de condomínios</h3>
 				<p>Contate o administrador do seu condomínio.</p>
 			</div>

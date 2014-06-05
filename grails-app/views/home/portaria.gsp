@@ -12,7 +12,7 @@
 	<section id="intro" class="first">
 		<div class="row">
 		    	<div class="center">
-				<h3>Portaria do Condomínio</h3>
+				<h3>Acesso Portaria</h3>
 				<p>Painel administrativo de controle de acesso e informação do condomínio. 
 				   Selecione uma opção abaixo clicando sob o quadro desejado.<br>
 				   Em caso de dúvidas entre em contato com o suporte técnico.
