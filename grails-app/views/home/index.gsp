@@ -13,11 +13,12 @@
 	</content>
 
 	<section id="intro" class="first">
-		<div class="row">
+		<div class="masterhead" style="background-color: #ffffff !important;">
 		    	<div class="center">
 				<img src="${resource(dir: 'images', file: 'logo.jpg')}" alt="TIDWEB"/>
-				<h3>Tidweb - Sistema de gestão de condomínios</h3>
-				<p>Contate o administrador do seu condomínio.</p>
+				<font color="#317eac" style="font-weight: bold;" size="55">TIDWEB</font>
+				<h2>Sistema de gestão de condomínios</h2>
+				<p>Sistema de controle de informação e comunicação para condomínios</p>
 			</div>
 		</div>
 	</section>

@@ -17,7 +17,6 @@ This menu is used to show function that can be triggered on the content (an obje
 		<li class="${ params.action == "create" ? 'active' : '' }">
 			<g:link action="create"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label"  args="[entityName]"/></g:link>
 		</li>
-	XXXXXXX		
 		<g:if test="${ params.action == 'show' || params.action == 'edit' }">
 			<!-- the item is an object (not a list) -->
 			<li class="${ params.action == "edit" ? 'active' : '' }">
