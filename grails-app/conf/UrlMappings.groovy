@@ -5,15 +5,17 @@ class UrlMappings {
 		/*
 		 * Pages without controller
 		 */
-//		"/"			(view:"/index")
+//		"/"				(view:"/index")
 		"/about"		(view:"/siteinfo/about")
 		"/blog"			(view:"/siteinfo/blog")
-		"/systeminfo"		(view:"/siteinfo/systeminfo")
+		"/systeminfo"	(view:"/siteinfo/systeminfo")
 		"/contact"		(view:"/siteinfo/contact")
 		"/terms"		(view:"/siteinfo/terms")
 		"/imprint"		(view:"/siteinfo/imprint")
-		"/nextSteps"		(view:"/home/nextSteps")
-		"/portaria"		(view:"/home/portaria")
+		"/nextSteps"	(view:"/home/nextSteps")
+//		"/homePortaria"	(view:"/home/portaria")
+//		"/homeMorador"	(view:"/home/morador")
+//		"/homeAdmin"	(view:"/home/admin")
 
 		/*
 		 * Pages with controller
@@ -34,6 +36,7 @@ class UrlMappings {
 		/*
 		 * System Pages without controller
 		 */
+		"401"	(view:'/_errors/401')
 		"403"	(view:'/_errors/403')
 		"404"	(view:'/_errors/404')
 		"500"	(view:'/_errors/error')

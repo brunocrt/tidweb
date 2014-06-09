@@ -6,18 +6,25 @@ package tidweb
  */
 class Unidade {
 
+	enum Tipo { CASA, APARTAMENTO }
+	
 	String numero
 	String bloco
 	String nomeEdificio
+	Tipo   tipoUnidade
 	
 	static	belongsTo	= [condominio:Condominio]
-	static	hasMany		= [morardor:Morador]
+	static	hasMany		= [morador:Morador]
 	static  hasOne		= [usuario:Usuario]
 	
-	static	constraints = {
+	static	constraints = {	
 		numero(nullable:false,blank:false,maxSize:4)
-		bloco(nullable:false,blank:true,maxSize:4)
-		nomeEdificio(nullable:false,blank:true,maxSize:20)
+		bloco(nullable:true,blank:true,maxSize:4)
+		nomeEdificio(nullable:true,blank:true,maxSize:20)
+		tipoUnidade(nullable:false,blank:false)
+		morador(nullable:true)
+		usuario(nullable:true)
+		
 	}
 	
 	/*
@@ -25,6 +32,6 @@ class Unidade {
 	 */
 	@Override	// Override toString for a nicer / more descriptive UI 
 	public String toString() {
-		return "${numero} ${bloco}";
+		return "${condominio.nome} ${numero} ${bloco}";
 	}
 }

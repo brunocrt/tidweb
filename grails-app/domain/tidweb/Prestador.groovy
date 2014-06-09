@@ -8,15 +8,16 @@ class Prestador {
 
 	String nome
 	String empresa
-	Date dataServico
+	Date dataServico = new Date()
+	Boolean autorizado = true
 			
-	static	belongsTo = [morador:Morador]
+	static	belongsTo = [morador:Morador, condominio:Condominio]
 	    
 	static	constraints = {
 		nome(nullable:false,blank:false,maxSize:50)
 		empresa(nullable:false,blank:false,maxSize:50)
 		dataServico(nullable:false,blank:false)
-    	}
+    }
 	
 	/*
 	 * Methods of the Domain Class

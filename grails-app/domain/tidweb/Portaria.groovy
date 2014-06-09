@@ -6,15 +6,16 @@ package tidweb
  */
 class Portaria {
 	
-	String identificacao
+	String identificacao = "Portaria A"
 	String telefone
 	
 	static	belongsTo	= [condominio:Condominio]
 	static	hasMany		= [usuario:Usuario]
 
 	static	constraints = {
-		identificacao(nullable:false,blank:false,maxSize:10)
-		telefone(nullable:false,blank:true,maxSize:50)
+		identificacao(nullable:false,blank:false,maxSize:50)
+		telefone(nullable:true,blank:true,maxSize:50)
+		usuario(nullable:true)
 	}
 	
 	/*

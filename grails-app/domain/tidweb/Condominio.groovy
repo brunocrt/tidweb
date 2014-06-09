@@ -19,8 +19,8 @@ class Condominio {
 		endereco(nullable:false,blank:false,maxSize:255)
 		cidade(nullable:false,blank:false,maxSize:50)
 		estado(nullable:false,blank:false,maxSize:2)
-		empresaAdministradora(nullable:false,blank:true,maxSize:50)
-    	}
+		empresaAdministradora(nullable:true,blank:true,maxSize:50)
+    }
 	
 	/*
 	 * Methods of the Domain Class

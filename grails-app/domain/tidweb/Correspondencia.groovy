@@ -11,7 +11,7 @@ class Correspondencia {
 	Date dataChegada = new Date()
 	Boolean entregue = false
 	
-	static	belongsTo	= [unidade:Unidade]
+	static	belongsTo	= [unidade:Unidade, condominio:Condominio]
 
 	static	constraints = {
 		titulo(nullable:false,blank:false,maxSize:50)

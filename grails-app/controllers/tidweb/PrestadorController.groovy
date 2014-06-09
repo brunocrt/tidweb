@@ -7,5 +7,17 @@ package tidweb
 class PrestadorController {
 
 	def scaffold = Prestador 
-//	def index = { }
+	
+	def save() {
+		
+		params["dataServico"] = Date.parse( 'dd/MM/yyyy', params["dataServico"] )
+		
+		def prestadorInstance = new Prestador(params)
+
+		if (!prestadorInstance.save(flush: true)) {
+			render(view: "create", model: [prestadorInstance: prestadorInstance])
+			return
+		}
+		redirect(action: "show", id: prestadorInstance.id)
+	}
 }

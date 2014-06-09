@@ -12,14 +12,15 @@ class Morador {
 	String placaCarro
 	String modeloCarro
 
-	static	hasOne		= [unidade:Unidade]
+	static	hasOne		= [unidade: Unidade]
 	static	hasMany		= [familiar:Familiar, domestica:Domestica, prestador:Prestador, visitante:Visitante, reserva:Reserva]
-
+	
 	static	constraints = {
 		nome(nullable:false,blank:false,maxSize:50)
 		email(email:true,nullable:false,blank:true,maxSize:100)
-		placaCarro(nullable:false,blank:true,maxSize:9)
-		modeloCarro(nullable:false,blank:true,maxSize:24)
+		placaCarro(nullable:true,blank:true,maxSize:9)
+		modeloCarro(nullable:true,blank:true,maxSize:24)
+		unidade(nullable:true)
 	}
 	
 	/*

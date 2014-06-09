@@ -8,9 +8,9 @@ class Reserva {
 
 	String area
 	Date   dataReserva = new Date()
-	Date   dataEvento
-	
-	static	belongsTo	= [unidade:Unidade]
+	Date   dataEvento = new Date()
+
+	static	belongsTo	= [unidade:Unidade, condominio:Condominio]
 	static  hasOne		= [morador:Morador]
 	static	hasMany		= [visitante:Visitante]
 	

@@ -7,14 +7,15 @@ package tidweb
 class Visitante {
 
 	String nome
-	Date dataVisita
+	Date dataVisita = new Date()
+	Boolean autorizado = true
 			
-	static	belongsTo = [morador:Morador]
+	static	belongsTo = [morador:Morador, condominio:Condominio]
 	    
 	static	constraints = {
 		nome(nullable:false,blank:false,maxSize:50)
 		dataVisita(nullable:false,blank:false)
-    	}
+    }
 	
 	/*
 	 * Methods of the Domain Class

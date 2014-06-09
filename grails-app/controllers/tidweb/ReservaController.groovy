@@ -7,5 +7,19 @@ package tidweb
 class ReservaController {
 
 	def scaffold = Reserva 
-//	def index = { }
+	
+	def save() {
+		
+		params["dataReserva"] = Date.parse( 'dd/MM/yyyy', params["dataReserva"] )
+		params["dataEvento"] = Date.parse( 'dd/MM/yyyy', params["dataEvento"] )
+		
+		def reservaInstance = new Reserva(params)
+
+		if (!reservaInstance.save(flush: true)) {
+			render(view: "create", model: [reservaInstance: reservaInstance])
+			return
+		}
+		redirect(action: "show", id: reservaInstance.id)
+	}
+
 }
