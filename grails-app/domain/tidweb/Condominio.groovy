@@ -12,7 +12,7 @@ class Condominio {
 	String estado
 	String empresaAdministradora
 
-	static hasMany	= [portaria:Portaria, avisoGeral:AvisoGeral]
+	static hasMany	= [portaria:Portaria, avisoGeral:AvisoGeral, usuario:Usuario]
 
 	static	constraints = {
 		nome(nullable:false,blank:false,maxSize:50)
@@ -20,6 +20,7 @@ class Condominio {
 		cidade(nullable:false,blank:false,maxSize:50)
 		estado(nullable:false,blank:false,maxSize:2)
 		empresaAdministradora(nullable:true,blank:true,maxSize:50)
+		usuario(nullable:true)
     }
 	
 	/*

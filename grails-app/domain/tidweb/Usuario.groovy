@@ -16,14 +16,18 @@ class Usuario {
 	String senha
 	Tipo   tipoUsuario
 	Date ultimoAcesso = new Date()
-	
-	static	belongsTo	= [unidade:Unidade]
+
+	static	belongsTo	= [condominio:Condominio,morador:Morador,portaria:Portaria]
 	
 	static	constraints = {
 		nome(nullable:false,blank:false,maxSize:50)
 		senha(nullable:true,blank:false,maxSize:50)
 		tipoUsuario(nullable:false,blank:false)
+		
 		ultimoAcesso(nullable:false,blank:false)
+		condominio(nullable:true)
+		morador(nullable:true)
+		portaria(nullable:true)
 	}
 	
 	/*

@@ -4,28 +4,39 @@
 <%--<sec:ifNotLoggedIn>--%>
 
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-			<!-- TODO: integrate Springsource Security etc. and show User's name ... -->
-    		<i class="glyphicon glyphicon-user"></i>
-    		<g:message code="security.signin.label"/><b class="caret"></b>
+    		<i class="glyphicon glyphicon-user"></i> ${ session['usuarioLogado'].nome }<b class="caret"></b>
 		</a>
-
+		
 		<ul class="dropdown-menu" role="menu">
 			<li class="form-container">
-				<form action="/j_spring_security_check" method="post" accept-charset="UTF-8">
-<%--				<form action="login" method="post" accept-charset="UTF-8">--%>
-					<input class="form-control" style="margin-bottom: 15px;" type="text"		placeholder="Username" id="username" name="username">
-					<input class="form-control" style="margin-bottom: 15px;" type="password"	placeholder="Password" id="password" name="password">
-					<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
-					<label class="string optional" for="user_remember_me"> Remember me</label>
-					<input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
-				</form>
-			</li>
-			<li class="divider"></li>
+				<input class="btn btn-secondary btn-block" type="button" id="changePassword" value="Alterar senha">
+			</li>		
+			<li class="divider"></li>		
 			<li class="button-container">
-				<!-- NOTE: the renderDialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->
-				<g:render template="/_common/modals/registerTextLink"/>
+				<g:link controller="login" action="logout">
+					<input class="btn btn-primary btn-block" type="button" id="logout" value="Sair">
+				</g:link>
 			</li>
 		</ul>
+
+
+<%--		<ul class="dropdown-menu" role="menu">--%>
+<%--			<li class="form-container">--%>
+<%--				<form action="/j_spring_security_check" method="post" accept-charset="UTF-8">--%>
+<%--				<form action="login" method="post" accept-charset="UTF-8">--%>
+<%--					<input class="form-control" style="margin-bottom: 15px;" type="text"		placeholder="Username" id="username" name="username">--%>
+<%--					<input class="form-control" style="margin-bottom: 15px;" type="password"	placeholder="Password" id="password" name="password">--%>
+<%--					<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">--%>
+<%--					<label class="string optional" for="user_remember_me"> Remember me</label>--%>
+<%--					<input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">--%>
+<%--				</form>--%>
+<%--			</li>--%>
+<%--			<li class="divider"></li>--%>
+<%--			<li class="button-container">--%>
+<%--				<!-- NOTE: the renderDialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->--%>
+<%--				<g:render template="/_common/modals/registerTextLink"/>--%>
+<%--			</li>--%>
+<%--		</ul>--%>
 
 <%--</sec:ifNotLoggedIn>--%>
 <%--<sec:ifLoggedIn>--%>

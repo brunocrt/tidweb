@@ -6,6 +6,16 @@ package tidweb
  */
 class DomesticaController {
 
-	def scaffold = Domestica
-//	def index = { }
+	static scaffold = Domestica
+		
+	def save() {
+		
+		def domesticaInstance = new Domestica(params)
+
+		if (!domesticaInstance.save(flush: true)) {
+			render(view: "create", model: [domesticaInstance: domesticaInstance])
+			return
+		}
+		redirect(action: "show", id: domesticaInstance.id)
+	}
 }

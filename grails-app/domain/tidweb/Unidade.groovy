@@ -15,7 +15,6 @@ class Unidade {
 	
 	static	belongsTo	= [condominio:Condominio]
 	static	hasMany		= [morador:Morador]
-	static  hasOne		= [usuario:Usuario]
 	
 	static	constraints = {	
 		numero(nullable:false,blank:false,maxSize:4)
@@ -23,8 +22,6 @@ class Unidade {
 		nomeEdificio(nullable:true,blank:true,maxSize:20)
 		tipoUnidade(nullable:false,blank:false)
 		morador(nullable:true)
-		usuario(nullable:true)
-		
 	}
 	
 	/*

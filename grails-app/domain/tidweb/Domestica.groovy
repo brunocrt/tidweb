@@ -6,7 +6,7 @@ package tidweb
  */
 class Domestica {
 
-	enum DiaSemana { SEG,TER, QUA, QUI, SEX, SAB, DOM, Todos }
+	enum DiaSemana { Segunda, Terca, Quarta, Quinta, Sexta, Sabado, Domingo, Todos }
 	enum Periodo { Manha, Tarde, Noite, Qualquer }
 
 	String nome

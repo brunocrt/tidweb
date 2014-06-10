@@ -19,7 +19,13 @@
 				</p>
 			</div>
 		</div>
-
+		
+		<div class="row">
+			<ul class="breadcrumb">
+			  <li class="active">Bem-vindo <b>${ session["portaria"].identificacao }</b>, seu último acesso foi em <g:formatDate format="dd/MM/yyyy HH:mm:ss" date="${ session["ultimoAcesso"] }"/></li>
+			</ul>		
+		</div>
+		
 		<div class="row">
 		    <div class="col-md-4">
 			<div class="bs-component">

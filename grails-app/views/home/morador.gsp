@@ -19,11 +19,11 @@
 
 		<div class="row">
 			<ul class="breadcrumb">
-			  <li class="active">Bem-vindo <b>${ session["morador"].nome }</b>, seu último acesso foi em <g:formatDate format="dd/MM/yyyy HH:mm:ss" date="${ session["usuarioLogado"].ultimoAcesso }"/></li>
+			  <li class="active">Bem-vindo <b>${ session["morador"].nome }</b>, seu último acesso foi em <g:formatDate format="dd/MM/yyyy HH:mm:ss" date="${ session["ultimoAcesso"] }"/></li>
 			</ul>		
 		</div>
 		
-		<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+		<ul class="nav nav-tabs lead" style="margin-bottom: 15px;">
 		  <li class="active"><a href="#visitantes" data-toggle="tab" style="color: #468847 !important;">Visitantes <span class="badge">${ visitantesList != null ? visitantesList.size() : "" }</span></a></li>
 		  <li class=""><a href="#correspondencias" data-toggle="tab" style="color: #DD5600 !important;">Correspondências <span class="badge">${ correspondenciasList != null ? correspondenciasList.size() : "" }</span></a></li>
 		  <li class=""><a href="#avisos" data-toggle="tab" style="color: #C71C22 !important;">Avisos <span class="badge">${ avisosList != null ? avisosList.size() : "" }</span></a></li>
@@ -43,12 +43,16 @@
 							  <li class="list-group-item">
 						    	<g:if test="${ v instanceof tidweb.Visitante }">
 									<span class="badge">Visitante</span>
-						    		${v.nome} - <g:formatDate format="dd/MM/yyyy" date="${v.dataVisita}"/>
+						    		<b>Nome:</b> ${v.nome}  <b>Data da Visita:</b> <g:formatDate format="dd/MM/yyyy" date="${v.dataVisita}"/>
 						    	</g:if>
 								<g:if test="${ v instanceof tidweb.Prestador }">
 									<span class="badge">Prestador</span>
-									${v.nome} - <g:formatDate format="dd/MM/yyyy" date="${v.dataServico}"/>
+									<b>Nome:</b> ${v.nome} <b>Empresa:</b>  ${v.empresa} <b>Data da Visita:</b> <g:formatDate format="dd/MM/yyyy" date="${v.dataServico}"/>
 								</g:if>
+								<g:if test="${ v instanceof tidweb.Domestica }">
+									<span class="badge">Domestica</span>
+									<b>Nome:</b> ${v.nome} <b>Dias da Semana:</b> ${v.diasAutorizados} <b>Períodos:</b> ${v.periodosAutorizados}
+								</g:if>								
 							  </li>
 						</g:each>
 					</g:if>

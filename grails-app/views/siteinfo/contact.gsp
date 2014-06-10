@@ -1,46 +1,34 @@
 <html>
-
 <head>
 	<title><g:message code="default.contact.title"/></title>
 	<meta name="layout" content="kickstart" />
+	<g:set var="layout_nomainmenu" value="${true}" scope="request" />
+	<g:set var="layout_nosecondarymenu" value="${true}" scope="request" />
 </head>
 
 <body>
 
 	<section id="intro">
-		<p class="lead">
-			For ongoing information about ${meta(name:'app.name')}, please read our company 
-			<a href="http://wordpress.com/signup/">blog</a>. Also, feel free to
-			contact us with service questions, partnership proposals, or media
-			inquiries.
-		</p>
+			Para mais informações sobre o TIDWEB entre em contato com a <a href="http://www.tidalis.com.br">TIDALIS</a>.<br>
+			Entre em contato conosco sobre os nossos serviços, parcerias ou press release.
 	</section>
-
 	<section id="address">
 	<div class="row">
 		<div class="col-md-4">
-			<h1><g:message code="default.contact.address"/></h1>
+			<h2><g:message code="default.contact.address"/></h2>
 				<address>
-					<strong>${meta(name:'app.name')}, Inc.</strong><br>
-					 123 Future Ave<br>
-					 San Francisco, CA 94107<br>
+					<strong>Av. Padre Arlindo Vieira, 1600,
+							São Paulo - SP<br>
 					 <br>
+					 </strong>
 				</address>
 				<address>
 					<div class="row">
 						<span class="col-md-3">
-							<strong><abbr title="Phone">Phone</abbr></strong>
+							<strong><abbr title="Phone">Fone</abbr></strong>
 						</span>
 						<span class="col-md-8">
-							(123) 456-7890
-						</span>
-					</div>
-					<div class="row">
-						<span class="col-md-3">
-							<strong><abbr title="Fax">Fax</abbr></strong>
-						</span>
-						<span class="col-md-8">
-					    +49 (0) 72 27 - 95 35 - 605
+							Fone: (11) 2331-9641 <br> (11) 99737-4488
 						</span>
 					</div>
 				</address>
@@ -50,17 +38,12 @@
 							<strong>Email</strong>
 						</span>
 						<span class="col-md-8">
-					    	<a href="mailto:info@${meta(name:'app.name')}.com">info@${meta(name:'app.name')}.com</a>
+					    	<a href="mailto:vendas@tidalis.com.br">vendas@tidalis.com.br</a>
 						</span>
 					</div>
 				</address>
 			</div>
 			
-			<div class="col-md-8">
-				<iframe width="100%" scrolling="no" height="300" frameborder="0" 
-					src="http://maps.google.ca/maps?f=q&source=s_q&hl=en&geocode=&q=123+Future+Ave,San+Francisco,+CA+94107&ie=UTF8&hq=&hnear=Downtown,San+Francisco,+CA+94107&z=12&iwloc=near&output=embed"
-		 			marginwidth="0" marginheight="0"></iframe>
-			</div>
 		</div>
 	</section>
 

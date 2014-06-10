@@ -7,5 +7,17 @@ package tidweb
 class AvisoGeralController {
 
 	def scaffold = AvisoGeral 
-//	def index = { }
+	def save() {
+		
+		params["dataAviso"] = Date.parse( 'dd/MM/yyyy', params["dataAviso"] )
+		
+		def avisoGeralInstance = new AvisoGeral(params)
+
+		if (!avisoGeralInstance.save(flush: true)) {
+			render(view: "create", model: [avisoGeralInstance: avisoGeralInstance])
+			return
+		}
+		redirect(action: "show", id: avisoGeralInstance.id)
+	}
+
 }

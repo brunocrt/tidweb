@@ -13,15 +13,22 @@ class HomeController {
 			def now = new Date()
 			between('dataVisita', now, now+7)
 			eq('morador', session["morador"])
+			eq('autorizado', true)
 		}
-		def prestadorList = Prestador.createCriteria().list {
+		def prestadoresList = Prestador.createCriteria().list {
 			def now = new Date()
 			between('dataServico', now, now+7)
 			eq('morador', session["morador"])
+			eq('autorizado', true)
+		}
+		def domesticasList = Domestica.createCriteria().list {
+			eq('morador', session["morador"])
+			eq('autorizado', true)
 		}
 		
 		// agregue a lista de visistantes (prestadores + domesticas)
-		visitantesList.addAll(prestadorList)
+		visitantesList.addAll(prestadoresList)
+		visitantesList.addAll(domesticasList)
 		
 		def correspondenciasList = Correspondencia.findAllWhere(unidade: session["morador"].unidade)
 		def avisosList = AvisoGeral.findAllWhere(condominio: session["condominio"])

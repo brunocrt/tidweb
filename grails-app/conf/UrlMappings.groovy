@@ -32,7 +32,7 @@ class UrlMappings {
 				controller(matches:/^((?!(api|mobile|web)).*)$/)
 		  	}
 		}
-
+		
 		/*
 		 * System Pages without controller
 		 */

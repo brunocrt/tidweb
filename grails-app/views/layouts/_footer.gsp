@@ -2,28 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2">
-				<h4>Product</h4>
-				<ul class="unstyled">
-					<li>
-			    		<i class="glyphicon glyphicon-home"></i>
-						<a href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a>
-					</li>
-					<li>
-			    		<i class="glyphicon glyphicon-eye-open"></i>
-						<a href="${createLink(uri: '/')}"><g:message code="default.tour.label"/></a>
-					</li>
-					<li>
-			    		<i class="glyphicon glyphicon-money"></i>
-						<a href="${createLink(uri: '/')}"><g:message code="default.pricing.label"/></a>
-					</li>
-					<li>
-			    		<i class="glyphicon glyphicon-comments"></i>
-						<a href="${createLink(uri: '/')}"><g:message code="default.faq.label"/></a>
-					</li>
-				</ul>
-			</div>
-			<div class="col-lg-2">
-				<h4>Company</h4>
+				<h4>Empresa</h4>
 				<ul class="unstyled">
 					<li>
 			    		<i class="glyphicon glyphicon-info-sign"></i>
@@ -40,11 +19,8 @@
 				</ul>
 			</div>
 			<div class="col-lg-8">
-				<h4> Information </h4>
-				<p>Designed and built with Twitter's <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a>. 
-				Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. 
-				Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-				<p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+				<h4> Informação </h4>
+				<p>tidweb v0.2 - Sistema de gestão de informação e segurança de condomínios residenciais</p>
 			</div>
 		</div>
 		<h4>Disclaimer</h4>
@@ -58,6 +34,6 @@
 		apparatus, product, or process disclosed.
 		</p>
 	
-		<p class="pull-right"><a href="#">Back to top</a></p>
+		<p class="pull-right"><a href="#">Topo</a></p>
 	</div>
 </footer>

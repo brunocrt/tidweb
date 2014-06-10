@@ -39,6 +39,13 @@ class LoginController {
 			// coloca usuario na sessao
 			session["usuarioLogado"] = usuario
 
+			// coloca o ultimo acesso na sessao
+			session["ultimoAcesso"] = usuario.ultimoAcesso
+
+			// atualiza o ultimo acesso
+			usuario.ultimoAcesso = new Date()
+			usuario.save()
+
 			// exibe pagina
 			redirect(controller: "home", action: "admin")
 			
@@ -63,10 +70,21 @@ class LoginController {
 		if (usuario != null) {
 		
 			// coloca usuario na sessao
-			session["usuarioLogado"] = usuario
+			session["usuarioLogado"] = usuario			
+
+			// coloca o ultimo acesso na sessao
+			session["ultimoAcesso"] = usuario.ultimoAcesso
 			
 			// coloca condominio na sessao
-			session["condominio"] = usuario.unidade.condominio
+			session["condominio"] = usuario.condominio
+
+			// coloca informacao da portaria na sessao
+			session["portaria"] = usuario.portaria
+
+			// atualiza o ultimo acesso
+			usuario.ultimoAcesso = new Date()
+			usuario.save()
+
 			
 			// exibe pagina
 			redirect(controller: "home", action: "portaria")
@@ -90,21 +108,24 @@ class LoginController {
 		
 		// valida o usuario
 		if (usuario != null) {
+					
+			// coloca usuario na sessao
+			session["usuarioLogado"] = usuario
+			
+			// coloca o ultimo acesso na sessao
+			session["ultimoAcesso"] = usuario.ultimoAcesso
+			
+			// coloca condominio na sessao
+			session["condominio"] = usuario.morador.unidade.condominio
+					
+			// coloca morador na sessao
+			if(usuario.morador != null ) {
+				session["morador"] = usuario.morador
+			}
 			
 			// atualiza o ultimo acesso
 			usuario.ultimoAcesso = new Date()
 			usuario.save()
-		
-			// coloca usuario na sessao
-			session["usuarioLogado"] = usuario
-			
-			// coloca condominio na sessao
-			session["condominio"] = usuario.unidade.condominio
-					
-			// coloca morador na sessao
-			if(usuario.unidade.morador != null && usuario.unidade.morador[0] != null ) {
-				session["morador"] = usuario.unidade.morador[0]
-			}
 			
 			// exibe pagina
 			redirect(controller: "home", action: "morador")
@@ -115,5 +136,17 @@ class LoginController {
 			flash.message = "Usuário e/ou senha inválido(s) ${loginAdmin.usuario}!"
 			render(view: "morador", model: [login:new Login()])
 		}
+	}
+
+	def changePassword() {
+
+	}
+	
+	def logout() {
+		session["usuarioLogado"] = null
+		session["condominio"] = null
+		session["morador"] = null
+		session.invalidate()
+		redirect(uri: "/")
 	}
 }
