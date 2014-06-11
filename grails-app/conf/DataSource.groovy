@@ -42,16 +42,16 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "create-drop"
             url = "jdbc:mysql://192.155.247.250:3307/df934d4d3ec1540db8f3bb38b17019140"
 			driverClassName = "com.mysql.jdbc.Driver"
 			username = "uPdV8YN6n0Qlq"
 			password = "pqqdG2kSkAM4i"
 			properties {
-				maxActive = 50
-				maxIdle = 25
-				minIdle = 5
-				initialSize = 5
+				maxActive = 10
+				maxIdle = 5
+				minIdle = 2
+				initialSize = 3
 				minEvictableIdleTimeMillis = 60000
 				timeBetweenEvictionRunsMillis = 60000
 				maxWait = 10000

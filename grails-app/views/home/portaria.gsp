@@ -1,7 +1,6 @@
 <html>
 
 <head>
-	<title>Startlife</title>
 	<meta name="layout" content="kickstart" />
 	<g:set var="layout_nomainmenu"		value="${true}" scope="request"/>
 	<g:set var="layout_nosecondarymenu"	value="${true}" scope="request"/>
@@ -22,7 +21,7 @@
 		
 		<div class="row">
 			<ul class="breadcrumb">
-			  <li class="active">Bem-vindo <b>${ session["portaria"].identificacao }</b>, seu último acesso foi em <g:formatDate format="dd/MM/yyyy HH:mm:ss" date="${ session["ultimoAcesso"] }"/></li>
+			  <li class="active">Bem-vindo <b>${ session['portaria'].identificacao }</b>, seu último acesso foi em <g:formatDate format="dd/MM/yyyy HH:mm:ss" date="${ session["ultimoAcesso"] }"/></li>
 			</ul>		
 		</div>
 		

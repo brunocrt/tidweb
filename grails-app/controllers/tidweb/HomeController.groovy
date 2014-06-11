@@ -1,6 +1,20 @@
 package tidweb
 
 class HomeController {
+	
+	def index() {
+		if( session["usuarioLogado"] != null ) {
+			if( session["usuarioLogado"].tipoUsuario == tidweb.Usuario.Tipo.MORADOR ) {
+				morador()
+			}	
+			if( session["usuarioLogado"].tipoUsuario == tidweb.Usuario.Tipo.PORTARIA ) {
+				render(view: "portaria")
+			}
+			if( session["usuarioLogado"].tipoUsuario == tidweb.Usuario.Tipo.ADMIN ) {
+				render(view: "admin")
+			}
+		}
+	}
 
 	def admin() {
 		render(view: "admin")

@@ -76,7 +76,7 @@ class LoginController {
 			session["ultimoAcesso"] = usuario.ultimoAcesso
 			
 			// coloca condominio na sessao
-			session["condominio"] = usuario.condominio
+			session["condominio"] = usuario.portaria.condominio
 
 			// coloca informacao da portaria na sessao
 			session["portaria"] = usuario.portaria
@@ -85,7 +85,6 @@ class LoginController {
 			usuario.ultimoAcesso = new Date()
 			usuario.save()
 
-			
 			// exibe pagina
 			redirect(controller: "home", action: "portaria")
 				

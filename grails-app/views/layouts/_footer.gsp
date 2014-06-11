@@ -20,7 +20,7 @@
 			</div>
 			<div class="col-lg-8">
 				<h4> Informação </h4>
-				<p>tidweb v0.2 - Sistema de gestão de informação e segurança de condomínios residenciais</p>
+				<p>${ meta(name:'app.name') } v${ meta(name:'app.version') } - Sistema de gestão de informação e segurança de condomínios residenciais</p>
 			</div>
 		</div>
 		<h4>Disclaimer</h4>

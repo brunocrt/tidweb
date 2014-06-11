@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Acesso Morador</title>
+	<title>Morador</title>
 	<meta name="layout" content="kickstart" />
 
 	<g:set var="layout_nomainmenu"		value="${true}" scope="request"/>

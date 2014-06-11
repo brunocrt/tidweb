@@ -8,7 +8,7 @@ class AvisoGeral {
 
 	String assunto
 	String descricao
-	String dataAviso = new Date()
+	Date dataAviso = new Date()
 	Boolean ativo = true
 	
 	static	belongsTo	= [condominio:Condominio]

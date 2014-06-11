@@ -18,7 +18,7 @@ class BootStrap {
 		
 		environments {
 
-		        development {
+				development {
 					
 					Condominio c1 = new Condominio(nome: 'Condominio 1', endereco: 'Rua Tal, 204', cidade: 'Sao Paulo', estado: 'SP' )
 					Condominio c2 = new Condominio(nome: 'Condominio 2', endereco: 'Rua Dali, 100', cidade: 'Vinhedo', estado: 'SP' )
@@ -75,7 +75,7 @@ class BootStrap {
 					if(c1_u1_m1_u1.hasErrors()){ println c1_u1_m1_u1.errors }
 					if(c1_u1_m1_u2.hasErrors()){ println c1_u1_m1_u2.errors }
 					
-					Visitante c1_u1_m1_v1 = new Visitante(nome: 'Visitante 1', dataVisita: new Date().parse("dd/MM/yyyy", "10/06/2014"), autorizado: true, morador: c1_u1_m1, condominio: c1)
+					Visitante c1_u1_m1_v1 = new Visitante(nome: 'Visitante 1', dataVisita: new Date().parse("dd/MM/yyyy", "13/06/2014"), autorizado: true, morador: c1_u1_m1, condominio: c1)
 					Visitante c1_u1_m1_v2 = new Visitante(nome: 'Visitante 2', dataVisita: new Date().parse("dd/MM/yyyy", "18/06/2014"), autorizado: true, morador: c1_u1_m1, condominio: c1)
 					
 					c1_u1_m1_v1.save()

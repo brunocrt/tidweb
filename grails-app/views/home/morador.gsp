@@ -83,7 +83,8 @@
 					<g:if test="${ avisosList != null }">
 						<g:each var="a" in="${ avisosList }" status="i">
 							  <li class="list-group-item">
-							    ${a.nome}
+							    	<strong>${a.assunto}</strong> - <g:formatDate format="dd/MM/yyyy" date="${a.dataAviso}"/>
+							    	${ a.descricao } 
 							  </li>
 						</g:each>
 					</g:if>
@@ -98,7 +99,7 @@
 					<g:if test="${ reservasList != null }">
 						<g:each var="r" in="${ reservasList }" status="i">
 							  <li class="list-group-item">
-							    ${r.nome}
+							    ${r.area} - <g:formatDate format="dd/MM/yyyy" date="${r.dataEvento}"/>
 							  </li>
 						</g:each>
 					</g:if>
@@ -113,7 +114,14 @@
 					<g:if test="${ muralList != null }">
 						<g:each var="m" in="${ muralList }" status="i">
 							  <li class="list-group-item">
-							    ${m.nome}
+									<g:if test="${ m.nota != null }">
+										<g:each var="n" in="${ m.nota }">
+											  <li class="list-group-item">
+											    	<strong>${n.titulo}</strong> - <g:formatDate format="dd/MM/yyyy" date="${n.dataCadastro}"/>
+											    	${ a.descricao } 
+											  </li>
+										</g:each>
+									</g:if>
 							  </li>
 						</g:each>
 					</g:if>

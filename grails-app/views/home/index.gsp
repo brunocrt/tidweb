@@ -22,8 +22,24 @@
 				<h2>Sistema de gestão de condomínios</h2>
 				<p>Sistema de controle de informação e comunicação para
 					condomínios</p>
-			</div>
+			</div>			
 		</div>
+	</section>
+	
+	<section id="body">
+	
+				
+			<div class="actions center">
+				<a href="${createLink(uri: '/login/portaria')}" class="btn btn-large btn-primary">
+					<i class="glyphicon glyphicon-home icon-white"></i>
+					Acesso Portaria
+				</a>
+				<a href="${createLink(uri: '/login')}" class="btn btn-large btn-success">
+					<i class="glyphicon glyphicon-home"></i>
+					Acesso Moradores
+				</a>					
+			</div>			
+	
 	</section>
 
 </body>

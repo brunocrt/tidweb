@@ -6,7 +6,6 @@
 <head>
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
-	<title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 
 <body>
@@ -50,6 +49,7 @@
 	<div>
 		<bs:paginate total="\${${propertyName}Count}" />
 	</div>
+
 </section>
 
 </body>
