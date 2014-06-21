@@ -9,18 +9,14 @@ class Morador {
 
 	String nome
 	String email
-	String placaCarro
-	String modeloCarro
 
 	static	belongsTo 	= [condominio: Condominio]
 	static	hasOne		= [unidade: Unidade]
-	static	hasMany		= [familiar:Familiar, domestica:Domestica, prestador:Prestador, visitante:Visitante, reserva:Reserva]
+	static	hasMany		= [veiculo: Veiculo, familiar:Familiar, domestica:Domestica, prestador:Prestador, visitante:Visitante, reserva:Reserva]
 	
 	static	constraints = {
 		nome(nullable:false,blank:false,maxSize:50)
 		email(email:true,nullable:false,blank:true,maxSize:100)
-		placaCarro(nullable:true,blank:true,maxSize:9)
-		modeloCarro(nullable:true,blank:true,maxSize:24)
 	}
 	
 	/*

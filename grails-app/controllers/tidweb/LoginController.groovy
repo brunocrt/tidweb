@@ -86,7 +86,7 @@ class LoginController {
 			usuario.save()
 
 			// exibe pagina
-			redirect(controller: "home", action: "portaria")
+			redirect(controller: "home", action: "portaria2")
 				
 		} else {
 		

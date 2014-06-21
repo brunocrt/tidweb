@@ -31,6 +31,7 @@ environments {
 				timeBetweenEvictionRunsMillis = 10000
 				maxWait = 10000
 				validationQuery = "SELECT 1"
+				testOnBorrow= true
 			}
         }
     }
@@ -56,6 +57,7 @@ environments {
 				timeBetweenEvictionRunsMillis = 60000
 				maxWait = 10000
 				validationQuery = "SELECT 1"
+				testOnBorrow = true
 			}
         }
     }

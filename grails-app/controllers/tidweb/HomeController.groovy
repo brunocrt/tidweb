@@ -58,7 +58,7 @@ class HomeController {
 				muralList:muralList] )
 	}
 	
-	def portaria() {
+	def portaria2() {
 		render(view: "portaria")
 	}
 }
