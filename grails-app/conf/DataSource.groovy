@@ -46,8 +46,8 @@ environments {
             dbCreate = "create-drop"
             url = "jdbc:mysql://192.155.247.250:3307/df934d4d3ec1540db8f3bb38b17019140"
 			driverClassName = "com.mysql.jdbc.Driver"
-			username = "uPdV8YN6n0Qlq"
-			password = "pqqdG2kSkAM4i"
+			username = "u0Kgj0YNFb1e6"
+			password = "poYw1rNf2yub6"
 			properties {
 				maxActive = 10
 				maxIdle = 5
