@@ -19,6 +19,10 @@ class Morador {
 		email(email:true,nullable:false,blank:true,maxSize:100)
 	}
 	
+	static mapping = {
+		sort "nome"
+	}
+	
 	/*
 	 * Methods of the Domain Class
 	 */

@@ -22,6 +22,25 @@ class MoradorController {
 		render nomes as JSON
 	}
 	
+	def buscaTodosMoradoresJSON() {
+		
+		def moradores = Morador.list(sort:"nome")
+		def jsonObjectList = []
+		
+		// ordene a lista
+		moradores = moradores.sort()
+		
+		moradores.each {
+			def jsonObject = JSON.parse((it as JSON).toString())
+			jsonObject.put("unidade", Unidade.get(it.unidade.id))
+			jsonObjectList.add(jsonObject)
+		}
+		
+		log.error(jsonObjectList as JSON)
+		
+		render jsonObjectList as JSON
+	}
+	
 	def buscaPorLetraJSON() {
 		
 		def moradores = Morador.findByNomeIlike(params['letra'] + "%")

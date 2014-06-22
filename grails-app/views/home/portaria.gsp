@@ -64,26 +64,30 @@
 					<div class="col-sm-3 col-md-2 sidebar">
 						<ul class="nav nav-sidebar">
 							<li class="active"><a href="#">Início</a></li>
-							<li><a href="#">Lista de Moradores</a></li>
+							<li><a href="javascript:getTodosMoradores()">Lista de Moradores</a></li>
 							<li><a href="#">Visitantes de Hoje</a></li>
 							<li><a href="#">Reservas de Hoje</a></li>
 						</ul>
 					</div>
 					<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
-						<h4 class="sub-header">Lista de Moradores: Letra A</h4>
-						<div style="overflow: auto: height: 10">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Nome</th>
-										<th>Unidade</th>
-									</tr>
-								</thead>
-								<tbody id="moradoresTable">
-								</tbody>
-							</table>
+					
+						<!-- Lista Moradores -->
+						<div id="panelListaMoradores">
+							<div id="letraId"></div>						
+							<div style="overflow: auto: height: 10">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Nome</th>
+											<th>Unidade</th>
+										</tr>
+									</thead>
+									<tbody id="moradoresTable">
+									</tbody>
+								</table>
+							</div>
 						</div>
-						
+												
 						<!-- Dados Morador -->
 						
 						<div id="panelMorador" class="bs-component">
