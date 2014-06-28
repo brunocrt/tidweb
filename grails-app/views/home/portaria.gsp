@@ -50,10 +50,13 @@
 						    <button type="button" class="btn btn-default" onclick="getMoradoresPorLetra('X')">X</button>
 						    <button type="button" class="btn btn-default" onclick="getMoradoresPorLetra('Z')">Z</button>
 						    <button type="button" class="btn btn-default" onclick="getMoradoresPorLetra('W')">W</button>
+						    <button type="button" class="btn btn-default" onclick="getTodosMoradores()">TODOS</button>
 						  </div>							
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">Sair</a></li>
-						</ul>
+						<div class="nav navbar-nav navbar-right" style="padding-top:5px; padding-right:15px;">
+								<g:link controller="login" action="logout">
+									<input class="btn btn-primary" type="button" id="logout" value="Sair">
+								</g:link>
+						</div>
 							
 					</div>
 				</div>
@@ -61,14 +64,7 @@
 
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-3 col-md-2 sidebar">
-						<ul class="nav nav-sidebar">
-							<li class="active"><a href="#">Início</a></li>
-							<li><a href="javascript:getTodosMoradores()">Lista de Moradores</a></li>
-							<li><a href="#">Visitantes de Hoje</a></li>
-							<li><a href="#">Reservas de Hoje</a></li>
-						</ul>
-					</div>
+
 					<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
 					
 						<!-- Lista Moradores -->
